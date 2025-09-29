@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Effect</title>
+    <style>
+        /* Basic Body Reset */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* General Section Styling */
+        section {
+            position: relative; /* Needed for positioning the text content */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Full viewport height */
+            overflow: hidden; /* Hide anything that might overflow */
+        }
+
+        /* Styling for the text content inside sections */
+        h2 {
+            font-size: 4rem;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+            border-radius: 10px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        /* The core parallax class */
+        .parallax {
+            /* The image is fixed in the viewport */
+            background-attachment: fixed;
+
+            /* Center the image and make it cover the entire element */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Assigning different background images to each parallax section */
+        /* Images are from picsum.photos - a great resource for placeholder images */
+        .bg1 {
+            background-image: url('https://picsum.photos/id/431/1920/1080');
+        }
+
+        .bg2 {
+            background-image: url('https://picsum.photos/id/1015/1920/1080');
+        }
+
+        .bg3 {
+            background-image: url('https://picsum.photos/id/1041/1920/1080');
+        }
+        
+        /* Styling for the static, non-parallax sections */
+        .static {
+            background-color: #f4f4f4;
+            padding: 40px 80px;
+            height: auto; /* Auto height based on content */
+            text-align: center;
+        }
+
+        .static h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .static p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Section 1: Parallax -->
+    <section class="parallax bg1">
+        <h2>Scroll Down To See The Effect</h2>
+    </section>
+
+    <!-- Section 2: Static Content -->
+    <section class="static">
+        <div>
+            <h3>This is a Static Content Area</h3>
+            <p>
+                The content here scrolls normally. As you continue to scroll, you will notice that the background image in the previous section remains fixed in place. This contrast between the scrolling content and the fixed background is what creates the parallax effect. It adds a sense of depth and can make a webpage feel more dynamic and engaging.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 3: Parallax -->
+    <section class="parallax bg2">
+        <h2>A Second Parallax Section</h2>
+    </section>
+
+    <!-- Section 4: Static Content -->
+    <section class="static">
+        <div>
+            <h3>More Static Content</h3>
+            <p>
+                This technique is very popular in modern web design, especially for landing pages and storytelling websites. It's achieved with just a few lines of CSS, making it a powerful yet simple tool for developers. The key is the `background-attachment: fixed;` property.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 5: Parallax -->
+    <section class="parallax bg3">
+        <h2>The End</h2>
+    </section>
+
+</body>
+</html>
